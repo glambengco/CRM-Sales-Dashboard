@@ -6,16 +6,19 @@ The project designs an interactive dashboard for sales team managers of a compan
 
 Dataset Source: [CRM Sales Opportunities on Maven Analytics](https://mavenanalytics.io/data-playground)
 
-[Maven Sales Challenge](https://mavenanalytics.io/challenges/maven-sales-challenge/8f59bcfa-d310-4947-b3d8-917b3cce270e)
+Project Link: [Project Page at Maven Analytics](https://mavenanalytics.io/project/18357)
 
-Project Link:
-
-GitHub Link:
+GitHub Link: [GitHub Repo](https://github.com/glambengco/CRM-Sales-Dashboard)
 
 Tools Used: #SQL #PowerBI
 
 Data Analysis Skills: #ETL #DataCleaning #ExploratoryDataAnalysis #DataModeling #DataVisualization #DashboardBuilding 
 
+Source Files:
+- [Link to Power BI report file](./CRM%20Sales%20Dashboard%20Import%20Mode.pbix)
+- [Link to database SQL script](./database_script_mssql.sql)
+- [Link to data profiling SQL script](./data_profiling_mssql.sql)
+- [Link to EDA SQL script](./eda_mssql.sql)
 
 # Project Background
 
@@ -38,13 +41,15 @@ The dataset contains four tables:
 - `sales_pipeline` - Records of sales opportunities with details including sales agent, product name, company name, sales pipeline stage, date of first engagement, date of closing a deal, and revenue.
 - `sales_teams` - Details of each sales agent including name, name of manager, and regional office.
 
-The four tables were imported to a database in Microsoft SQL Server to better simulate a real-world data infrastructure.
+The four tables were imported to a database in Microsoft SQL Server to better simulate a real-world data infrastructure. SQL script to import data is available [here](./database_script_mssql.sql)
 
 # Data Profiling in SQL
 
 Data profiling was performed to identify relevant data and potential anomalies, outliers, or other data quality issues that need to be handled prior to exploratory data analysis.
 
 ## Sales Pipeline
+
+Click [here](./data_profiling_mssql.sql) to view script containing all SQL queries for data profiling.
 
 The table contains 8800 records of sales opportunities.
 
@@ -61,7 +66,7 @@ Spelling inconsistencies:
 	WHERE [product] = 'GTXPro'
 	```
 
-# Accounts and Products 
+## Accounts and Products 
 
 The products table contains 3 product series with a combined total of 7 products. The accounts table contains 85 distinct accounts. Relevant columns for both tables have no missing or anomalous values.
 
@@ -77,6 +82,8 @@ There are 5 sales agents that were not on the sales pipeline table. As there is 
 While the dataset contains several missing values, these are expected and should be left as is. The cleaned tables are of adequate quality and ready for data exploration.
 
 # Exploratory Data Analysis (EDA)
+
+Click [here](./eda_mssql.sql) to view script with all the SQL queries for exploratory data analysis,
 
 Exploring the dataset allows us to discover trends and relationships in the data and serves as a reference on what to expect during dashboard building.
 
